@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*行业资讯*/
+.main{width:1200px; height:auto; margin:0 auto; overflow:hidden}
+/*子菜单*/
+.sidebar{width:290px; height:auto; float:left;font-family:"微软雅黑"; margin-left:10px; background:url(../images/news_03.jpg) no-repeat 0 3px; margin-top:20px;}
+.sidebar h2{background:url(../images/about-us33_03.png) no-repeat; color:#fff; font-size:30px; height:67px; line-height:65px;padding-left:48px;font-weight:normal;}
+.sidebar li{width:290px; height:65px; margin-top:5px;}
+.sidebar li a{background:url(../images/about-us_10.png) no-repeat; width:242px; height:70px; display:block; line-height:55px; color:#fff; font-size:24px; padding-left:48px;font-weight:normal;}
+.sidebar li a.on{background:url(../images/about-us23_03.png) no-repeat; margin-bottom:5px; line-height:65px;}
+.sidebar li a:hover{background:url(../images/about-us23_03.png) no-repeat; line-height:65px;}
+
+/*内容头部*/
+.title{width:870px; height:65px; float:right; border-bottom:1px solid #999999; margin:55px 0 45px 0; position:relative}
+.title h2{ font-size:30px;font-family:"微软雅黑";font-weight:normal; color:#333333; float:left}
+.title h2 span{font-size:14px; display:block; line-height:10px; text-align:center}
+.title .location{ float:left;font-family:"微软雅黑";font-weight:normal;font-size:14px;  position:absolute; right:0; top:30px}}
+.title .location span{color:#333333;}
+.title .location a{ color:#333333;}
+.title .location a.on{color:#00cc99}
+.title .location a:hover{color:#00cc99}
+.content{ width:880px; height:auto; float:right; margin-right: 15px}
+.content h4{ text-align:center; font-size:26px; font-family:"微软雅黑"; font-weight:normal; color:#333333; clear: both;}
+.content i{ width:168px; float:right; text-align:right; display:block; margin-top:45px; padding-right:155px; font-family:"微软雅黑"; font-style:normal; font-size:16px; font-weight:normal;color:#333333;}
+.content img{ float:right; margin-right:155px; margin-top:14px; margin-bottom:35px}
+.content p{margin-top:35px ; line-height:25px; clear:both; margin-right:35px; font-size:16px; font-family:"微软雅黑"; font-weight:normal; color:#333333; letter-spacing:-1px}
+.content b{float:right; margin-right:35px; font-family:"微软雅黑"; font-weight:normal; color:#333333; margin-top:105px}
+
+.article{width:880px;margin-top:70px;  } 
+.page-up{float:left;}
+.page-up span,.page-down span{font-family:"微软雅黑"; font-size:14px; color:#666666;}
+.page-up a,.page-down a{font-family:"微软雅黑"; font-size:14px; color:#666666;}
+.page-down{float:right}
+.page-up a:hover,.page-down a:hover{color:red}
+.hot{width:1200px; height:auto; margin:110px auto 0; overflow:hidden; float:left}
+
+
+

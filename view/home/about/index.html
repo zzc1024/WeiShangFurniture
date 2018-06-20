@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>关于我们</title>
+<link type="text/css" href="<?php echo PN; ?>css/about.css" rel="stylesheet">
+<link type="text/css" href="<?php echo PN; ?>css/style.css" rel="stylesheet">
+<script src="<?php echo PN; ?>js/jquery-1.12.4.min.js"></script>
+<script src="<?php echo PN; ?>js/js.js"></script>
+</head>
+
+<body><!--头部-->
+<?php hear_translate($result['translate_id'],M,C,A); ?>
+<!--banner轮播图-->
+<?php hear_banner(2); ?>
+<!--公司简介-->
+<div class="main">
+	<div class="sidebar">
+    	<?php sidebar($mysqli,'category','category_name','category_id','category_pid',$type,"index.php?mot=$M&ctl=$C&act=$A"); ?>
+    </div>
+    <div class="content">
+        <div class="title">
+            <?php position($mysqli,$C,$A,$type); ?>
+        </div>
+        <?php foreach ($about_result as $k => $v) { ?>
+        <?php if($v['about_pid']==$type){ ?>
+            <p><?php echo $v['about_text']; ?></p>
+            <img src="<?php echo $v['about_img']; ?>">
+        <?php } ?>
+        <?php } ?>
+        	
+    </div>
+</div>
+<!--尾部-->
+<?php footer_translate($mysqli) ?>
+
+
+</body>
+</html>

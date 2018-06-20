@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>产品中心</title>
+<link type="text/css" href="<?php echo PN; ?>css/product.css" rel="stylesheet">
+<link type="text/css" href="<?php echo PN; ?>css/style.css" rel="stylesheet">
+<script src="<?php echo PN; ?>js/jquery-1.12.4.min.js"></script>
+<script src="<?php echo PN; ?>js/js.js"></script>
+</head>
+
+<body>
+<!--头部-->
+<?php hear_translate($result['translate_id'],M,C,A); ?>
+<!--banner轮播图-->
+<?php hear_banner(4); ?>
+<!--产品中心-->
+<div class="main">
+<!--侧面导航-->
+	<div class="sidebar">
+    	<?php sidebar($mysqli,'category','category_name','category_id','category_pid',$type,"index.php?mot=$M&ctl=$C&act=$A"); ?>
+    </div>
+    
+    <!--内容头部-->
+    <div class="content">
+		<div class="title">
+			<?php position($mysqli,$C,$A,$type); ?>
+		</div>
+        <ul>
+        <?php foreach ($product_result as $k => $v) { ?>
+            <li>
+                <a href="index.php?mot=home&ctl=product&act=pro-details&type=<?php echo $v['product_type']; ?>&productid=<?php echo $v['product_id']; ?>"><img src="<?php echo $v['product_img']; ?>"></a>
+                <i></i> 
+                <a href="pro-details.html" class="mask">
+                    <b><?php echo $v['product_name']; ?>      <b>编号:<?php echo $v['product_number']; ?></b>
+                </a>
+            </li>
+        <?php } ?>
+        </ul>
+        
+        
+        
+        <ol>
+            <?php new_page(3,$p,"index.php?mot=$M&ctl=$C&act=$A",4,$num,$mysqli,$type); ?>
+        </ol>
+    </div>
+</div>
+
+
+
+<!--尾部-->
+<?php footer_translate($mysqli) ?>
+
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>产品详情</title>
+<link type="text/css" href="<?php echo PN; ?>css/pro-details.css" rel="stylesheet">
+<link type="text/css" href="<?php echo PN; ?>css/style.css" rel="stylesheet">
+<script src="<?php echo PN; ?>js/jquery-1.12.4.min.js"></script>
+<script src="<?php echo PN; ?>js/js.js"></script>
+</head>
+
+<body>
+<!--头部-->
+<?php hear_translate($result['translate_id'],M,C,A); ?>
+<!--banner轮播图-->
+<?php hear_banner(4); ?>
+<!--行业资讯-->
+<div class="main">
+	<div class="sidebar">
+    	<?php sidebar($mysqli,'category','category_name','category_id','category_pid',$type,"index.php?mot=$M&ctl=$C&act=index"); ?>
+    </div>
+    <div class="content">
+    <!--客房家具内容头部导航-->
+      	<div class="title">
+             <?php position($mysqli,$C,'index',$type); ?>
+            </div>
+            <?php foreach ($result1 as $k => $v) { ?>
+            <?php if($product_id==$v['product_id']){ ?>
+                <img src="<?php echo $v['product_img']; ?>">
+                <h3><?php echo $v['product_name']; ?>
+                <span>¥ <?php echo $v['product_price']; ?></span>
+                </h3>
+                <p>编号：<?php echo $v['product_number']; ?></p>
+                <p>产地: <?php echo $v['product_local']; ?></p>
+                <p>面料: <?php echo $v['product_fabric']; ?></p>
+                <p>材质: <?php echo $v['product_materia']; ?></p>
+                <p>颜色分类:<?php echo $v['product_color']; ?></p>
+                <p>结构工艺: <?php echo $v['product_structure']; ?></p>
+
+                <?php 
+                    $product_id = $v['product_id'];   
+                    $sqls = "select * from product where product_id>$product_id and product_type=$type and product_state=0 order by product_id limit 0,1";
+                    $sqlx = "select * from product where product_id<$product_id and product_type=$type and product_state=0 order by product_id desc limit 0,1";
+                    $results = select($mysqli,$sqls);
+                    $resultx = select($mysqli,$sqlx);
+                ?>
+
+            <?php } ?>
+            <?php } ?>
+
+            <div class="article">
+                <div class="page-up">
+                <span>上一篇：<a href="index.php?mot=home&ctl=product&act=pro-details&type=<?php echo $type; ?>&productid=<?php echo $results['product_id']; ?>"><?php echo $results['product_name']; ?></a></span>
+                </div>
+                <div class="page-down">
+                        <span>下一篇：<a href="index.php?mot=home&ctl=product&act=pro-details&type=<?php echo $type; ?>&productid=<?php echo $resultx['product_id']; ?>"><?php echo $resultx['product_name']; ?></a></span>
+                </div>
+            </div>
+        
+  	</div>
+  	<div class="hot">
+    	<!-- <div class="title">
+        <h3>热销产品</h3>
+        </div>
+        <ul>
+            <li>
+                <a href="#"><img src="images/product_03.jpg"></a>
+                <a href="#">文艺小清新沙发</a>
+            </li>
+            <li>
+                <a href="#"><img src="images/product_05.jpg"> </a>
+                <a href="#">小圆桌</a>
+            </li>
+            <li>
+                <a href="#"><img src="images/product_07.jpg"></a>
+                <a href="#">布艺组合沙发</a>
+            </li>
+            <li>
+                <a href="#"><img src="images/product_09.jpg"></a>
+                <a href="#">会议桌</a>
+            </li>
+    	</ul> -->
+    </div>
+</div>
+
+
+
+<!--尾部-->
+<?php footer_translate($mysqli) ?>
+
+
+</body>
+</html>

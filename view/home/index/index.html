@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+<meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+<title>首页</title>
+<link type="text/css" href="<?php echo PN; ?>css/style.css" rel="stylesheet">
+<link type="text/css" href="<?php echo PN; ?>css/index.css" rel="stylesheet" >
+<script src="<?php echo PN; ?>js/jquery-1.12.4.min.js"></script>
+<script src="<?php echo PN; ?>js/index.js"></script>
+
+</head>
+
+<body>
+<!--头部-->
+<?php hear_translate($result['translate_id'],M,C,A); ?>
+<!--banner轮播图-->
+<?php hear_banner(1); ?>
+<!--关于我们-->
+<div class="about">
+	<div class="top">
+	
+        <ul>
+            <li><img src="<?php echo PN; ?>images/index_03.jpg"><h2>客户第一</h2></li>
+            <li><img src="<?php echo PN; ?>images/index_05.jpg"><h2>信誉至上</h2></li>
+            <li><img src="<?php echo PN; ?>images/index_07.jpg"><h2>质量为先</h2></li>
+            <li><img src="<?php echo PN; ?>images/index08_03.png"><h2>专业质量</h2></li>
+        </ul>
+	</div>
+    <div class="title">
+    	<h2>About Us</h2><h6>关于我们</h6>
+    </div>
+	<div class="bottom">
+    	<div class="bottom-text">
+        	<i></i>
+            <p>威尚家具有限公司主要针对酒店、宾馆、会议、会所、别墅、企业单位量身定制各类：高档
+电动桌，宴会桌，宴会椅，会议桌，会议椅，餐厅布草，台布椅套，客房家具，各类影院椅，
+娱乐家具，卡座沙发，ktv卡座沙发，各类肯德基快餐桌椅，咖啡厅，酒吧桌椅等各类桌椅
+家具。“客户第一、信誉至上、质量为先”是威尚家具对客户的承诺，也是威尚家具的精神，
+为客户提供从设计、生产到安装配套一条龙服务，并对产品保修保用，质量追踪。以优质的
+专业品质为客户创造舒适化、现代化、极富价值的休闲环境。</p>
+        </div>
+    </div>
+</div>
+<!--新闻中心-->
+<div class="news">
+	<div class="title">
+    	<h2>News center</h2><h6>新闻中心</h6>
+    </div>
+    <div id="slide">
+        <ol>
+        <?php foreach ($new_result as $k => $v) { ?>
+            <li>
+                <a href="index.php?mot=home&ctl=news&act=news-details&newid=<?php echo $v['new_id']; ?>&type=<?php echo $v['new_type']; ?>"><img src="<?php echo $v['new_thu']; ?>"></a>
+                
+                <i></i> 
+                <a href="index.php?mot=home&ctl=news&act=news-details&newid=<?php echo $v['new_id']; ?>&type=<?php echo $v['new_type']; ?>" class="mask">
+                        <?php echo $v['new_title']; ?></a>
+            </li>
+        <?php } ?> 
+            
+        </ol>
+        <a href="javascript:" id="prev"></a>
+        <a href="javascript:" id="next"></a>	
+    </div>
+    <ul>
+    <?php foreach ($new_result as $k => $v) { ?>
+        <li>
+            <div class="date">
+                <h2><?php echo $v['niantime']; ?><br><span><?php echo $v['yuetime']; ?>.<?php echo $v['ritime']; ?></span></h2>
+            </div>
+            <h2>
+                <a href="index.php?mot=home&ctl=news&act=news-details&newid=<?php echo $v['new_id']; ?>&type=<?php echo $v['new_type']; ?>"><?php echo $v['new_title']; ?></a>
+            </h2>
+            <p><?php echo $v['new_abstract']; ?></p>
+         </li>
+    <?php } ?> 	
+
+   </ul>
+    	<a href="index.php?mot=home&ctl=news&act=index" class="more">More...</a>
+</div>
+<!--产品中心-->
+<div class="proudct">
+	<div class="title">
+    	<h2>Product center</h2><h6>产品中心</h6>
+    </div>
+    <ul>
+    <?php foreach ($product_result as $k => $v) { ?>
+        <li>
+            <a href="index.php?mot=home&ctl=product&act=pro-details&productid=<?php echo $v['product_id']; ?>&type=<?php echo $v['product_type']; ?>"><img src="<?php echo $v['product_img']; ?>"></a>
+                <i></i>
+                <a href="pro-details.html" class="mask">
+                    <b><?php echo $v['product_name']; ?></b><b><?php echo $v['product_number']; ?></b>
+                </a>
+            
+        </li>
+    <?php } ?> 	
+    </ul>
+	
+    	<a href="index.php?mot=home&ctl=product&act=index" class="more">More...</a>
+    
+</div>
+<!--联系我们-->
+<div class="contact">
+	<div class="title">
+    	<h2>Contact us</h2><h6>联系我们</h6>
+    </div>
+    <div class="message">
+        <form>
+             <table cellspacing="0" cellpadding="0"  width="470px" height="575px">
+                <tr >
+                    <td colspan="2" >
+                        <input type="text" placeholder="NAME/姓名" class="txt" id="name" name="contac_name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" >
+                        <input type="text" placeholder="QQ/微信" class="txt" id="qq" name="contac_qq"/>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td colspan="2" >
+                        <input type="text" placeholder="TELEPHONE/电话" class="txt" id="tele" name="contac_telephone"/>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td colspan="2" >
+                        <input type="text" placeholder="ADDRESS/地址" class="txt" id="addr" name="contac_address"/>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td colspan="2">
+                        <input type="text" placeholder="E-MAIL/邮箱" class="txt" id="email" name="contac_mail"/>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td colspan="2">
+                        <textarea id="texta" name="contac_message">MESSAGE/留言</textarea>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>
+                        <input type="text" placeholder="验证码" id="code" name="vcode"/>
+                    </td>
+                    <td  >
+                    <div class="cut">
+                        <img id="qwe" src="index.php?mot=admin&ctl=code&code=$M" onclick="this.src='index.php?mot=admin&ctl=code&code=$M&rand='+Math.random()">
+                        <a onclick="query();">看不清，换一张</a></div>
+                    </td>
+                 </tr>
+                 <tr>
+                    <td colspan="2">
+                            <input type="button" value="提交信息" class="sub" onclick="contact()" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+     	<div class="contact-right">
+     		<p>邮编:<?php echo $contact_result['contact_code']; ?></p>
+     		<p>传真:<?php echo $contact_result['contact_fax']; ?></p>
+     		<p>服务热线:<?php echo $contact_result['contact_hotline']; ?></p>
+     		<p>电子邮箱:<?php echo $contact_result['contact_mail']; ?></p>
+     		<p>地址:<?php echo $contact_result['contact_address']; ?></p>
+     		<div style="width:423px;height:417px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+     	</div>
+</div>
+<!--尾部-->
+<?php footer_translate($mysqli) ?>
+
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.4"></script>
+<script src="<?php echo PN; ?>js/map.js"></script>
+<script type="text/javascript" src="<?php echo PU ?>lib/layer/2.4/layer.js"></script>
+<script type="text/javascript">
+    function query(){
+      $('#qwe').attr("src","index.php?mot=admin&ctl=code&code=$M");
+
+    }
+
+    function contact(){
+        var data = {
+            'contac_name':$('[name="contac_name"]').val(),
+            'contac_qq':$('[name="contac_qq"]').val(),
+            'contac_telephone':$('[name="contac_telephone"]').val(),
+            'contac_address':$('[name="contac_address"]').val(),
+            'contac_mail':$('[name="contac_mail"]').val(),
+            'contac_message':$('[name="contac_message"]').val(),
+            'vcode':$('[name="vcode"]').val()
+        }
+
+        $.ajax({
+            url:'index.php?mot=home&ctl=contact&act=index',
+            type: 'post',
+            data: data,
+            dataType: 'json',
+
+            success: function(data){
+                if(data.code==1){
+                    layer.msg(data.message,{icon:1,time:3000,btn:['确定']},function(){
+                        location.href='index.php?mot=home&ctl=contact&act=index'
+                    })
+                }else{
+                    layer.msg(data.message,{icon:2,time:3000,btn:['确定']})
+                }
+            }
+        })
+    }
+
+</script>
+</body>
+</html>

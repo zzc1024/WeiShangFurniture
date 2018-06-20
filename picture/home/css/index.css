@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*关于我们*/
+.about{ width:100%; height:797px; margin:0 auto; }
+.top{width:1200px; height:240px;margin:0 auto; margin-top:65px}
+.top ul li { float:left; }
+.top ul li img{ margin:0 95px 40px;}
+.top ul li h2{text-align:center; font-family:"微软雅黑"; font-size:18px; font-weight:normal; color:#666666}
+.title{ width:1200px; height:100px; margin:0 auto; position:relative; background:url(../images/contact_03.png) no-repeat center 15px;}
+.title h2{  font-weight:normal;text-align:center; font-size:30px;font-family:"arial"; color:#666666; }
+.title h6{font-size:30px; font-weight:normal;color:#666666;  font-family:"微软雅黑";  text-align:center}
+.bottom{width:100%; height:408px; margin:0 auto; margin-top:50px; overflow:hidden;background:url(../images/news-2_02.png) no-repeat center; }
+/*.bottom-about{width:100%; height:408px; margin:0 auto}*/
+.bottom-text{width:1200px; height:408px; margin:0 auto; position:relative }
+.bottom-text i{ width:590px; height:185px; background:#fff;position:absolute; right:0;  top:20px;opacity:0.5;filter:alpha(opacity=50)}
+.bottom-text p{ width:530px;position:absolute; right:25px;  top:45px; line-height:20px; font-family:"微软雅黑"; font-size:14px;font-weight:normal;letter-spacing:-1px; color:#333333}
+/*新闻中心*/
+.news{width:1200px; height:555px; margin:0 auto; padding-top:160px;position:relative}
+.news .title{background:url(../images/news04_03.png) no-repeat center 15px;}
+#slide{width:450px; height:335px; float:left; margin-top:38px; overflow:hidden; position:relative }
+.news ul{ width:720px; float:right; margin-top:38px}
+#slide ol li{width:450px; height:335px;position: relative; float:left}
+#slide ol li i{width:100%; height:60px; background:#70d6bc;opacity:0.5; filter:alpha(opacity=50);display:none;position: absolute; left: 0; bottom: 0;}
+#slide ol li .mask{position:absolute; left:0; bottom:0; width:100%; height:60px; text-align:center;  line-height:60px;display:none; font-size: 24px;font-family:"微软雅黑"; color: #fff; font-weight:normal;}
+#slide ol li:hover i{display:block;}
+#prev{ width:30px; height:47px;background:url(../images/index_06.png) no-repeat;position:absolute; left:25px; top:144px;}
+#next{width:30px; height:47px; background:url(../images/index5555.png) no-repeat;position:absolute; right:25px; top:144px; }
+#slide ol li:hover .mask{display:block;}
+.date{ width:80px; height:65px; background:#00cc99; text-align:center; font-family:"微软雅黑"; padding-top:15px;font-weight:normal; float:left; margin-right:20px;}
+.date h2{font-size:24px; color:#fff; line-height:25px;font-weight:normal;}
+.date h2 span{font-size:18px;font-weight:normal; margin-right:8px}
+.news ui{width: 715px; height:345px}
+.news ul li h2 a{font-size:24px; font-family:"微软雅黑"; font-weight:normal; letter-spacing:-1px; color: #333333; line-height:19px;  }
+/*.news ul li h2 a:hover{color: #F90105}*/
+.news ul li h2{margin-bottom:10px; }
+.news ul li{ margin-bottom:43px;width:712px; height:85px; }
+.news ul li p{font-size:14px; font-family:"微软雅黑"; font-weight:normal;letter-spacing:-1px; color:#333333;line-height: 22px}
+/*产品中心*/
+.proudct{width:1200px; height:830px; margin:0 auto; margin-top:150px;position:relative}
+.proudct .title{background: url(../images/news06_07.png) no-repeat center 8px;letter-spacing:-1px}
+.proudct ul{margin-top: 40px; }
+.proudct ul li{ float: left; margin: 10px 10px; width: 379px; height: 283px; position: relative}
+.proudct ul li i{position: absolute; left: 0; bottom: 0; width: 100%; height: 60px;display:none;background:#76dbc1;opacity:0.5; filter:alpha(opacity=50);}
+.proudct .mask{position: absolute; left: 0; bottom: 0; width: 100%; height: 60px;  line-height: 60px;display:none;font-size: 14px;font-family:"微软雅黑"; padding-left: 20px; font-weight:normal; }
+.proudct .mask b{margin-left:20px;color: #fff; }
+.proudct ul li:hover i{display:block;}
+.proudct ul li:hover .mask{display:block;}
+.more{position: absolute; left: 50%; margin-left: -59px; bottom: 0; width:110px; height:38px; background:#66cc99; text-align:center; line-height:38px; border-radius:40px; color:#fff}
+/*联系我们*/
+.contact{width: 1200px; height: 780px;margin: 0 auto; margin-top: 160px}
+.txt{ width:464px; height:40px;color: #666666; font-family:"微软雅黑"; font-size: 12px; background:#fff; padding-left:6px; border:1px solid #999; line-height:40px}
+#code{width:224px; height:38px; line-height:38px; float:left;  color:#666666;font-family:"微软雅黑"; font-size: 12px; background:#fff; padding-left:6px; border:1px solid #999}
+.contact img{float:left;}
+.contact .cut{ font-size:12px; line-height:38px;  float:right; display:block;background:#eeeeee; width:230px; height:38px; border:1px solid #999; }
+.contact .cut a{ color:#000;font-family:"微软雅黑";}
+.contact .message{ float:left; margin-left:110px; margin-top:39px}
+#texta{ width:464px; height:200px;  resize:none; padding-left:6px; font-family:"微软雅黑"; line-height:25px; font-size: 12px;color:#666666; border:none; border:1px solid #999; overflow:hidden}
+.sub{width:100%; height: 33px;bgcolor:none; background: #66cc99;border:none; font-size: 18px; color: #fff;font-family:"微软雅黑"; cursor:pointer; outline:none}
+
+.contact-right{width: 425px;float: right;  margin-top: 37px; margin-right: 110px}
+.contact-right p{font-family:"微软雅黑"; color: #666666; font-size: 14px; line-height: 25px;}
+#map{margin-top:30px}
+
+/*尾部*/
+.footer{width: 100%; height:350px;background: #999999}
+.warpper{ width:1200px; height: 275px; margin: 0 auto; }
+.footer-menu{width: 650px; height: 275px; float:left;  margin-left:156px}
+.footer-menu dl{margin: 55px 50px 0 0;float: left;}
+.footer-menu dl dt{color: #fff; font-size: 18px; font-family:"微软雅黑"; margin-bottom: 20px;font-weight:normal;}
+.footer-menu dl dd{text-indent:5px}
+.footer-menu dl dd a{color: #fff; font-size: 14px; font-family:"微软雅黑"; line-height: 25px; font-weight:normal;}
+
+.footer-menu{font-size: 14px; font-weight:normal;}
+.code{width:160px; height:200px;float:right; margin-right:160px; margin-top:40px}
+.code img{ margin-left:10px }
+.code h3{ margin-top:40px;font-family:"微软雅黑"; color:#fff; font-size:20px; font-weight:normal}
+.footer p{width: 100%; height: 75px; background: #66cc99;text-align: center; line-height: 75px; font-size: 12px; color: #fff; font-family:"微软雅黑";clear:both}

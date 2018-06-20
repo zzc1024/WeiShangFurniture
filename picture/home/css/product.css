@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+.main{width:1200px; height:auto; margin:0 auto; overflow:hidden; margin-bottom:80px}
+/*子菜单*/
+.sidebar{width:290px; height:auto; float:left;font-family:"微软雅黑"; margin-left:10px; background:url(../images/product_03.png)no-repeat 15px 3px; margin-top:20px;}
+.sidebar h2{background:url(../images/about-us33_03.png) no-repeat; color:#fff; font-size:30px; height:67px; line-height:65px;padding-left:48px;font-weight:normal;}
+.sidebar li{width:290px; height:65px; margin-top:5px; }
+.sidebar li a{background:url(../images/about-us_10.png) no-repeat; width:242px; height:70px; display:block; line-height:55px; color:#fff; font-size:24px; padding-left:48px;font-weight:normal;}
+.sidebar li a.on{background:url(../images/about-us23_03.png) no-repeat; margin-bottom:5px; line-height:65px;}
+.sidebar li a:hover{background:url(../images/about-us23_03.png) no-repeat; line-height:65px;}
+
+/*内容头部导航*/
+.title{width:870px; height:65px; float:right; border-bottom:1px solid #999999;  margin:55px 0 45px 0; 
+position:relative;}
+.title h2{ font-size:30px;font-family:"微软雅黑";font-weight:normal; color:#333333; float:left}
+.title h2 span{font-size:14px; display:block; line-height:12px; text-align:center }
+.title .location{ float:left;font-family:"微软雅黑";font-weight:normal;font-size:14px;  position:absolute; right:0; top:30px}
+.title .location span{color:#333333;}
+.title .location a{ color:#333333;}
+.title .location a.no{color:#00cc99}
+.title .location a:hover{color:#00cc99}
+.content{ width:870px; float:right;}
+.content ul{ overflow:hidden; margin-bottom:80px; width:870px; }
+.main .content ul li{float: left; margin-right:20px; margin-bottom:20px; position:relative;height:283px;width:379px}
+.content ul li i{position: absolute; left: 0; bottom: 0; width: 100%; height: 60px;display:none;background:#8cc3a5;opacity:0.5; filter:alpha(opacity=50);}
+.content .mask{position: absolute; left: 0; bottom: 0; width: 100%; height: 60px; line-height: 60px;display:none;font-size: 14px;font-family:"微软雅黑"; padding-left: 20px; font-weight:normal; }
+.content .mask b{margin-left:20px;color: #fff; }
+.content ul li:hover i{display:block;}
+.content ul li:hover .mask{display:block;}
+
+/*翻页*/
+.main .content ol{ margin-left:50px; clear:both;}
+.main .content ol li{ float:left; margin:0 10px}
+.main .content ol li a{ padding:5px 10px;  height:35px;line-height:35px; font-size:18px; font-family:"微软雅黑";color:#333333;}
+.content ol li a.on{background:#00cc99;border-radius:10px;color:#fff}
+.main .content ol li:hover{background:#00cc99;border-radius:10px;}
+.main .content ol li:hover a{color:#fff}
+

@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0}
+a{text-decoration:none}
+li{list-style:none}
+img{ border:none;}
+:focus{ outline:none;}
+a:focus{ outline:none;}
+@font-face{ font-family:"arial"; src:url(../font/arial.ttf)}
+/*头部*/
+.header{width:1200px; height:80px; margin:0 auto}
+.header img{float:left; margin-left:45px; margin-top:4px}
+/*导航*/
+.nav{width:1025px; height:80px; float:right}
+.nav ul li{float:left; width:60px; height:80px; line-height:80px; text-align:center; font-size:14px; margin-left:140px; }
+.nav ul li .on{ color:#00cc99}
+.nav ul li a{ color:#333333; font-family:"微软雅黑"; height:80px; display:block}
+.nav ul li a:hover{color:#00cc99}
+#banner{width:100%; height:600px; margin:0 auto; position:relative; overflow:hidden;}
+#banner ul li{width:1920px; height:600px; position:absolute; left:50%; margin-left:-960px; top:0; }
+#num{ width:120px; height:17px;  position:absolute; left:50%; margin-left:-50px; bottom:30px;}
+#num a{background:url(../images/index_05.png) no-repeat; width:18px; height:18px; float:left; margin-right:20px;}
+#num a.on{background:url(../images/index_03.png) no-repeat}
+
+/*尾部*/
+.footer{width: 100%; height:350px;background: #999999;}
+.warpper{ width:1200px; height: 275px; margin: 0 auto; }
+.footer-menu{width: 650px; height: 275px; float:left;  margin-left:156px}
+.footer-menu dl{margin: 55px 50px 0 0;float: left;}
+.footer-menu dl dt{color: #fff; font-size: 18px; font-family:"微软雅黑"; margin-bottom: 20px;font-weight:normal;}
+.footer-menu dl dd{text-indent:5px}
+.footer-menu dl dd a{color: #fff; font-size: 14px; font-family:"微软雅黑"; line-height: 25px; font-weight:normal;}
+
+.footer-menu{font-size: 14px; font-weight:normal;}
+.code{width:160px; height:200px;float:right; margin-right:160px; margin-top:60px}
+.code img{ margin-left:10px }
+.code h3{ margin-top:20px;font-family:"微软雅黑"; color:#fff; font-size:20px; font-weight:normal}
+.footer p{width: 100%; height: 75px; background: #66cc99;text-align: center; line-height: 75px; font-size: 12px; color: #fff; font-family:"微软雅黑";clear:both}
+
+

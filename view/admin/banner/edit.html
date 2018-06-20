@@ -1,0 +1,122 @@
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="<?php echo PU ?>lib/html5shiv.js"></script>
+<script type="text/javascript" src="<?php echo PU ?>lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="<?php echo PU ?>static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo PU ?>static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo PU ?>lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo PU ?>static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="<?php echo PU ?>static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="<?php echo PU ?>lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<!--/meta 作为公共模版分离出去-->
+
+<title>添加导航栏</title>
+</head>
+<body>
+<div class="page-container">
+	<form class="form form-horizontal" id="form-banner-edit">
+				<div class="row cl">
+		            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>分组：</label>
+		            <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+		                <select name="banner_grouping" class="select">
+		                <?php foreach($result as $k => $v){ ?>
+		                    <option value="<?php echo $v['translate_sort'] ?>"><?php echo $v['translate_name'] ?></option>
+		                <?php } ?>
+		                </select>
+		                </span> </div>
+		        </div>
+		        <input type="hidden" name="banner_id" value="<?php echo $result1['banner_id']; ?>">
+		        <div class="row cl">
+					<label class="form-label col-xs-4 col-sm-2">图片：</label>
+					<div class="formControls col-xs-8 col-sm-9">
+						<input type="file" class="input-text" value="" placeholder="" id="file" name="banner_img">
+					</div>
+				</div>
+
+		<div class="row cl">
+			<div class="col-9 col-offset-3">
+				<input onClick="banneredit()" class="btn btn-primary radius" type="button" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+			</div>
+		</div>
+	</form>
+</div>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="<?php echo PU ?>lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo PU ?>lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="<?php echo PU ?>static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="<?php echo PU ?>static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="<?php echo PU ?>lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="<?php echo PU ?>lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="<?php echo PU ?>lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="<?php echo PU ?>lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.skin-minimal input').iCheck({
+		checkboxClass: 'icheckbox-blue',
+		radioClass: 'iradio-blue',
+		increaseArea: '20%'
+	});
+	
+	$("#tab-banner").Huitab({
+		index:0
+	});
+	$("#form-banner-edit").validate({
+		rules:{
+			
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+			//$(form).ajaxSubmit();
+			var index = parent.layer.getFrameIndex(window.name);
+			//parent.$('.btn-refresh').click();
+			parent.layer.close(index);
+		}
+	});
+});
+
+function banneredit(){
+	var formData = new FormData($('form')[0]); 
+
+	$.ajax({
+		url:'index.php?mot=admin&ctl=banner&act=edit',
+		type:'post',
+		dataType:'json',
+		data: formData,
+		contentType: false, //不设置内容类型  
+        processData: false, //不处理数据  
+
+		success: function(data){
+			if(data.code==1){
+				layer.msg(data.message,{icon:1,time:3000,btn:['确定']},function(){
+					location.href=data.url
+				});
+			}else{
+				layer.msg(data.message,{icon:2,time:3000,btn:['确定']});
+			}
+		}
+	})
+}
+
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

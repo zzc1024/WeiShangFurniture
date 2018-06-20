@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contact{width: 1200px; height:auto; margin: 0 auto; margin-top: 160px; overflow:hidden; margin-bottom:145px}
+.contact .title{ width:1200px; margin:0 auto; position:relative; margin-bottom:35px}
+.contact .title h2{ width:190px ;border-bottom:1px solid #000; margin:0 auto ; color:#333333;font-family:"微软雅黑"; font-size: 30px; font-weight:normal; text-align:center; }
+.contact .title h2 span{ color:#333333;font-family:"微软雅黑"; font-size: 12px; font-weight:normal;display:block; margin-bottom:18px}
+.location{font-family:"微软雅黑";font-weight:normal;font-size:14px; line-height:65px; position:absolute; right:0; top:10px}
+.location span{color:#333333;}
+.location a{ color:#333333;}
+.location a.on{color:#00cc99}
+.location a:hover{color:#00cc99}
+.txt{ width:464px; height:40px;color: #666666; font-family:"微软雅黑"; font-size: 12px; background:#fff; padding-left:6px;border:1px solid #999; line-height:40px}
+#code{width:224px; height:38px; line-height:38px; float:left;  color:#666666;font-family:"微软雅黑"; font-size: 12px; background:#fff; padding-left:6px;border:1px solid #999;}
+.contact img{float:left;}
+.contact .cut{ font-size:12px; line-height:38px;  float:right; display:block;background:#eeeeee; width:230px; height:38px;border:none; border:1px solid #999 }
+.contact .cut a{ color:#000;font-family:"微软雅黑";}
+.contact .message{ float:left; margin-left:110px; margin-top:15px}
+#texta{ width:464px; height:200px;  resize:none; padding-left:6px; font-family:"微软雅黑"; line-height:25px; font-size: 12px;color:#666666; border:none; border:1px solid #999;overflow:hidden }
+.sub{width:100%; height: 33px;bgcolor:none; background: #66cc99;border:none; font-size: 18px; color: #fff;font-family:"微软雅黑"; cursor:pointer; outline:none}
+
+.contact-right{width: 425px;float: right;  margin-top: 13px; margin-right: 110px}
+.contact-right p{font-family:"微软雅黑"; color: #666666; font-size: 14px; line-height: 25px;}
+#map{margin-top:30px}
